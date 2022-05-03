@@ -1,0 +1,208 @@
+/* Setup da página */
+:root{
+    --vermelho:#e58609;
+    --preta:#141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--preta);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+ ::-webkit-scrollbar{
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track{
+    background: var(--preta);
+    border-radius: 30px;
+ }
+    ::-webkit-scrollbar-thumb{
+    background: var(--vermelho);
+    border-radius: 30px;
+    }
+
+/* Logo e Menu */
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    
+}
+
+header .logo{
+    color: var(--vermelho);
+    font-family: Arial Black, Times;
+    font-size: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+header nav a{
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;  
+
+    background-image:
+    linear-gradient(
+    transparent 0%,
+    transparent 90%,
+    #e58609 90%,
+    #e58609 100%
+  );
+background-repeat: no-repeat;
+background-size: 0% 100%;
+background-position-x: right;
+transition: background-size 300ms;
+
+
+}
+
+header nav a:hover{
+    background-size: 100% 100%;
+    background-position-x: left;
+
+}
+/* Filme em destaque */
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,.50) 100%), url(/img/capa3.jpg);
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.filme-principal .descricao{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.filme-principal .titulo{
+    margin-top: 10%;
+    width: 300px;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.botao{
+    background-color: rgba(160, 104, 1, 0.904);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 10px;
+
+}
+
+.botao:hover{
+    background-color: white;
+    color: rgb(128, 96, 9);
+   
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.filme-principal .container{
+    width: 60%;
+    margin-left: 40px;
+   
+    }
+
+    /* Indicacoes de filmes */
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+    
+}
+
+.rodape .texto-rodape{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 10px;
+    
+}
+
+.rodape .git{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 30px;
+    border-radius: 100%;
+    margin-left: 10%;
+}
+
+.rodape .git:hover{
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    transition: .3s ease all;
+}
+
+/*Modal Filme em destaque*/
+
+ .modal {
+    position: fixed;
+    margin: 20px;
+    top: 0;
+    right: 0;
+    bottom:0;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+
+  .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modal > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 15px 20px;
+    background: #fff;
+  }
+  .fechar {
+    position: absolute;
+    width: 30px;
+    right: -15px;
+    top: -20px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 5px;
+    background: #ff4545;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #8d0000;
+  }  
+  
+  
